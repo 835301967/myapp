@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package store_scene_4sdk;
+
+
+// 存储场景服务 for sdk
+service StoreScene4SdkService {
+  rpc Get (GetRequest) returns (GetResponse) {
+  }
+}
+
+
+message GetRequest {
+  // @required
+  // 场景code
+  // @inject_tag: validate:"required" comment:"场景code"
+  string scene_code = 1;
+}
+
+enum OverwritePolicy {
+  // 未设置
+  UnKnow = 0;
+  // 允许
+  Allow = 1;
+  // 禁止
+  Forbid = 2;
+}
+
+message GetResponse {
+  int64 cloud_factory = 1;
+  string access_key_id = 2;
+
+  string access_key_secret = 3;
+  string ARN = 4;
+  string appCode = 5;
+  string bucket_name = 6;
+  string bucket_location = 7;
+  string custom_host = 8;
+  OverwritePolicy overwrite_policy = 9;
+}

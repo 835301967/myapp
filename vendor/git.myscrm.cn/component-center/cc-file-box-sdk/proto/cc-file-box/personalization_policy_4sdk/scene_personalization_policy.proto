@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package personalization_policy_4sdk;
+
+
+
+// 个性化策略 for sdk
+service PersonalizationPolicy4SdkService {
+  rpc Get (GetRequest) returns (GetResponse) {
+  }
+}
+
+message GetRequest {
+  string scene_code = 1;
+}
+
+
+message GetResponse {
+  map<string, StoreScene> policy = 1;
+}
+
+message StoreScene {
+  int64 cloud_factory = 1;
+  string access_key_id = 2;
+
+  string access_key_secret = 3;
+
+  string appCode = 5;
+  string bucket_name = 6;
+  string bucket_location = 7;
+  string custom_host = 8;
+}
+
