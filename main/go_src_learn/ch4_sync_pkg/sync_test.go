@@ -88,6 +88,10 @@ func TestSyncRWLock(t *testing.T) {
 	fmt.Println(count)
 }
 
+func TestSyncSemaphore(t *testing.T) {
+
+}
+
 func TestSyncOnce(t *testing.T) {
 	once := sync.Once{}
 	for i := 0; i < 100; i++ {
