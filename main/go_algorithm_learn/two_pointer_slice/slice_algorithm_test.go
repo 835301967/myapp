@@ -7,7 +7,7 @@ import (
 )
 
 func TestHuiWenSubString(t *testing.T) {
-	input := "abnbjjkljljjklfjewfejwklajfgklewgjkewljagklwejgklewjglwwwwwwwwwwwwwwwwwwwwwwww"
+	input := "abc"
 	str := getSubLongPendStr(input)
 	fmt.Println(str)
 	input2 := "abbbbcccccabcdedcbaisgetjkljljkjl"
